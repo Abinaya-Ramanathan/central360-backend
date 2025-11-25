@@ -25,7 +25,7 @@ process.on('unhandledRejection', (reason, promise) => {
 async function runMigrations() {
   try {
     const migrationsDir = path.join(__dirname, 'migrations');
-    const migrationFiles = ['001_complete_schema.sql', '002_default_data.sql'];
+    const migrationFiles = ['001_complete_schema.sql', '002_default_data.sql', '003_add_vehicle_fields_to_stock_items.sql'];
     
     for (const file of migrationFiles) {
       const migrationPath = path.join(migrationsDir, file);
